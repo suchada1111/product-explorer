@@ -406,3 +406,80 @@ body {
   margin-top: 12px;
   border-top: 1px dashed var(--border);
 }
+
+
+/* Responsive Styles สำหรับหน้าจอแล็ปท็อป แท็บเล็ต และสมาร์ตโฟน */
+
+/* 1. สำหรับแท็บเล็ตและหน้าจอขนาดกลาง (ความกว้างไม่เกิน 768px) */
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 32px 16px 64px;
+  }
+
+  .top-bar h1 {
+    font-size: 1.6rem;
+  }
+
+  .minimal-panel {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+
+  .form-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .item-image-wrapper {
+    height: 170px;
+  }
+}
+
+/* 2. สำหรับสมาร์ตโฟน (ความกว้างไม่เกิน 480px) */
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 24px 12px 48px;
+  }
+
+  .top-bar h1 {
+    font-size: 1.4rem;
+  }
+
+  .top-bar p {
+    font-size: 0.85rem;
+  }
+
+  /* แสดงการ์ดสินค้าเต็มความกว้าง 1 คอลัมน์บนมือถือ */
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .item-image-wrapper {
+    height: 210px;
+  }
+
+  .btn-minimal {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .catalog-header button {
+    width: 100%;
+  }
+
+  .item-button-group {
+    flex-direction: column;
+  }
+}
